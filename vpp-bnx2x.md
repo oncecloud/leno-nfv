@@ -73,8 +73,7 @@ libz.so (libc6,x86-64) => /lib64/libz.so
 同时上层目录中的```rpm/vpp-17.04 rpm/vpp-17.01```下也做了如下操作
 
 10.编译报错 ：```(bnx2x.o): undefined reference to symbol 'inflateInit2_'```
-企图修改
-```/home/zym/vpp/build-root/rpm/vpp-17.04/build-root/build-vpp-native/vpp/Makefile```
+企图修改```/home/zym/vpp/build-root/rpm/vpp-17.04/build-root/build-vpp-native/vpp/Makefile```
 中的CFLAGS添加-lz，发现与之前不同的是，这里的Makefile并没有这样的选项。
 
 11. 修改  ```/home/zym/vpp/build-data/packages/vpp.mk``` 中的LDFLAGS，添加lz选项。
