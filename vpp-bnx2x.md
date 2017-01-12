@@ -69,13 +69,13 @@ libz.so (libc6,x86-64) => /lib64/libz.so
 提示问题：解压发现```vpp-17.04```不存在
 
 11.将```vpp-17.01```改名为```vpp-17.04```再压缩
-继续编译过程中发现它重新下载了```dpdk-17.11.tar.xz```， 在vpp-17.04目录下，将之前打包的dpdk拷进来，并且改变Makefile中的MD5码。
+继续编译过程中发现它重新下载了```dpdk-17.11.tar.xz```， 在```vpp-17.04```目录下，将之前打包的```dpdk```拷进来，并且改变```Makefile```中的MD5码。
 同时上层目录中的```rpm/vpp-17.04 rpm/vpp-17.01```下也做了如下操作
 
 12.编译报错 ：```(bnx2x.o): undefined reference to symbol 'inflateInit2_'```
 企图修改```/home/zym/vpp/build-root/rpm/vpp-17.04/build-root/build-vpp-native/vpp/Makefile```
-中的CFLAGS添加-lz，发现与之前不同的是，这里的Makefile并没有这样的选项。
+中的```CFLAGS```添加```-lz```，发现与之前不同的是，这里的```Makefile```并没有这样的选项。
 
-13.修改  ```/home/zym/vpp/build-data/packages/vpp.mk``` 中的LDFLAGS，添加lz选项。
+13.修改  ```/home/zym/vpp/build-data/packages/vpp.mk``` 中的```LDFLAGS```，添加```lz```选项。
 
 成功。
