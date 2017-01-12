@@ -1,0 +1,4 @@
+[ZF_LOG]: Start Function  [Pmd_init_port]
+[ZF_LOG]: Start Function  [Find_dpdk_port]
+[ZF_LOG]: End Function    [Find_dpdk_port] with []
+[ZF_LOG]: End Function    [Pmd_init_port] with []
