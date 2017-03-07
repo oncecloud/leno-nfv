@@ -35,15 +35,15 @@ service vpp start
 ##### host A: 
 
 ```
-vppctl set int ip addr TenGigabitEthernet81/0/0 10.3.0.2/24
+vppctl set int ip addr TenGigabitEthernet81/0/0 10.3.0.1/24
 vppctl set int state TenGigabitEthernet81/0/0 up
 
-rm -f /tmp/vhost2.sock
-vppctl create vhost-user socket /tmp/vhost2.sock server
+rm -f /tmp/vhost1.sock
+vppctl create vhost-user socket /tmp/vhost1.sock server
 vppctl set int state VirtualEthernet0/0/0 up
 vppctl set int l2 bridge VirtualEthernet0/0/0 200 0
 
-vppctl create vxlan tunnel src 10.3.0.2 dst 10.3.0.1 vni 200
+vppctl create vxlan tunnel src 10.3.0.1 dst 10.3.0.2 vni 200
 vppctl set int l2 bridge vxlan_tunnel0 200 1
 ```
 ##### host B:
