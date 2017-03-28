@@ -1,4 +1,3 @@
-======================
 ostack-ovs : Open vSwitch with DPDK
 ======================
 
