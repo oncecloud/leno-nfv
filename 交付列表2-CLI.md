@@ -1,4 +1,3 @@
-```
   api trace                                api trace [on|off][dump|save|replay <file>][status][free][post-mortem-on]
   cj                                       cj <enable | disable | dump>
   classify session                         classify session [hit-next|l2-hit-next|acl-hit-next <next_index>|policer-hit-next <policer_name>]
@@ -340,4 +339,4 @@ ikev2 profile set <id> traffic-selector <local|remote> ip-range <start-addr> - <
   trace filter                             filter trace output - include NODE COUNT | exclude NODE COUNT | none
   trace frame-queue                        trace frame-queue (on|off)
   vhost thread                             vhost thread <iface> <worker-index> [del]
-```
+
